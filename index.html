@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>bc i forgot the letter lol</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    body {
+        box-sizing: border-box;
+        height: 100vh;
+        width: auto;
+    }
+    img {
+        max-width: 40vw;   
+        height: auto; 
+        cursor: pointer;    
+    }
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: auto;
+    }
+    .no-show {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+</style>
+<body>
+    <div class="main">
+        <img id="el-1" src="./ill.png" width="1632" height="1416" onclick="clicker()">
+        <img id="el-2" class="no-show" src="./letter-closed.png" width="1774" height="1342" onclick="clicker2()">
+        <img id="el-3" class="no-show" src="./letter-open.png" width="2431" height="3200" onclick="clicker3()">
+    </div>
+</body>
+<script>
+    let el1 = document.querySelector("#el-1");
+    let el2 = document.querySelector("#el-2");
+    let el3 = document.querySelector("#el-3");
+
+    function clicker() {
+        el1.classList.remove("show");
+        el1.classList.add("no-show");
+
+        el2.classList.remove("no-show");
+        el2.classList.add("show");
+    }
+
+    function clicker2() {
+        el2.classList.remove("show");
+        el2.classList.add("no-show");
+
+        el3.classList.remove("no-show");
+        el3.classList.add("show");
+    }
+
+    function clicker3() {
+        el3.classList.remove("show");
+        el3.classList.add("no-show");
+
+        el1.classList.remove("no-show");
+        el1.classList.add("show");
+    }
+</script>
+</html>
